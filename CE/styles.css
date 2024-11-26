@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: seashell;
+    color: #333;
+}
+
+/* Ensure the header content is centered and proportioned */
+.header-container {
+    max-width: 1200px; /* Restrict width to 1200px for large screens */
+    margin: 0 auto; /* Center the container */
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Space out title and navigation */
+    align-items: center; /* Vertically center title and navigation */
+}
+
+/* Add some padding inside the header for better proportions */
+header {
+    background-color: #0066cc;
+    color: white;
+    padding: 20px; /* Increase padding for better spacing */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Center navigation links */
+header nav ul {
+    list-style: none;
+    display: flex; /* Use flexbox for horizontal alignment */
+    justify-content: center; /* Center align the nav links */
+    gap: 20px; /* Add space between nav items */
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* Center align hero content */
+.hero {
+    background: url('images/hero-bg.jpg') no-repeat center center/cover;
+    color: #0066cc;
+    text-align: center;
+    padding: 100px 20px; /* Add padding for better spacing */
+    display: flex; /* Flexbox for centering */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    flex-direction: column; /* Stack content vertically */
+}
+
+/* Restrict width of hero content */
+.hero-container {
+    max-width: 800px; /* Restrict the width of hero content */
+    margin: 0 auto; /* Center the container */
+}
+
+/* Adjust hero section text */
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.hero .cta-button {
+    background-color: #ff6600;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.program-card {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.program-card:hover {
+    background-color: #f0f0f0;
+}
+
+.program-details {
+    display: none;
+    margin-top: 10px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+form input,
+form textarea {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #0066cc;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #004d99;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .program-card {
+        margin: 10px 0;
+    }
+}
