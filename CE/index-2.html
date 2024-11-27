@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Creative Einsteins - LEGO Engineering Programs for Kids. Build skills, spark creativity, and prepare your child for the future.">
+    <meta name="author" content="Creative Einsteins">
+    <title>Creative Einsteins</title> <!-- Title for the browser tab -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+<header>
+    <div class="header-container">
+        <h1>Creative Einsteins</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#programs">Programs</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#login">Login</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section id="home" class="hero">
+  <video autoplay muted loop playsinline class="hero-video">
+    <source src="projects-background.mov" type="video/quicktime">
+    <source src="Herosectionvideo.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="hero-container">
+    <h1 class="hero-text">
+      <span id="word1">ENGINEERING.</span>
+      <span id="word2">CREATIVITY.</span>
+      <span id="word3">TEAMWORK.</span>
+    </h1>
+    <p>Empowering kids with the skills of tomorrow through fun, creative, and STEAM hands-on projects.</p>
+<br></br>
+    <a href="#programs" class="cta-button">Learn More</a>
+  </div>
+</section>
+
+	<!--About Section-->
+ <section id="about" class="section about-section">
+    <div class="about-container">
+        <div class="about-text">
+            <h2>About Us</h2>
+            <p>
+                At Creative Einstein (CE), we specialize in nurturing your child's teamwork skills while unlocking their natural talents for imagination, creativity, and problem-solving through the world of LEGO engineering. We encourage learning, empowering kids to thrive in a fun and supportive environment. Join us as we embark on a journey to cultivate your child's potential and love for learning, one brick at a time!
+            </p>
+        </div>
+        <div class="about-images">
+            <img src="lego1.jpg" alt="LEGO Robotics" class="about-img">
+            <img src="lego2.jpg" alt="LEGO Creativity" class="about-img">
+        </div>
+    </div>
+</section>
+
+    <!-- Programs Section -->
+    <section id="programs" class="section">
+        <h2>Our Programs</h2>
+        <div class="program-card" onclick="showProgramDetails('program1')">
+            <h3>LEGO Robotics/Engineering</h3>
+            <p>Hands-on robotics classes for kids to build functional machines and learn egineering principles, using LEGO kits.</p>
+        </div>
+        <div class="program-card" onclick="showProgramDetails('program2')">
+            <h3>LEGO Stop-Motion Film</h3>
+            <p>Learn to create a LEGO based Stop-Motion flim and unleash your gift of imagination. Learn basic fundamentals of creating Stop-Motion film.</p>
+        </div>
+        <div id="program1" class="program-details">
+            <p>Program 1 details...</p>
+        </div>
+        <div id="program2" class="program-details">
+            <p>Program 2 details...</p>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="section">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" required>
+            <label for="email">Your Email</label>
+            <input type="email" id="email" required>
+            <label for="message">Message</label>
+            <textarea id="message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Creative Einsteins. All rights reserved. Creative Einsteins is not an entity or DBA. Operated and organized by BP JEWELS company.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

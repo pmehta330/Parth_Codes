@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: seashell;
+    color: #333;
+}
+
+/* Ensure the header content is centered and proportioned */
+.header-container {
+    max-width: 1200px; /* Restrict width to 1200px for large screens */
+    margin: 0 auto; /* Center the container */
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Space out title and navigation */
+    align-items: center; /* Vertically center title and navigation */
+}
+
+/* Add some padding inside the header for better proportions */
+header {
+    background-color: #0066cc;
+    color: white;
+    padding: 20px; /* Increase padding for better spacing */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Center navigation links */
+header nav ul {
+    list-style: none;
+    display: flex; /* Use flexbox for horizontal alignment */
+    justify-content: center; /* Center align the nav links */
+    gap: 20px; /* Add space between nav items */
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  color: black;
+  font-size: 1.3em;
+  font-weight: bold;
+  overflow: hidden;
+}
+
+.hero {
+  background-image: url('fallback-image.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the video covers the entire section */
+  z-index: -1; /* Keeps the video behind the content */
+	opacity: 0.6;
+}
+
+.hero-container {
+  z-index: 1; /* Ensures the content stays above the video */
+  position: relative;
+}
+
+.hero-text {
+  font-size: 3rem;
+  color: black;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+}
+
+span {
+  display: inline-block;
+  opacity: 0; /* Initially hidden */
+  animation: fadeInOut 6s linear infinite;
+  background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Specific timing for each word */
+#word1 {
+  animation-delay: 0s;
+}
+
+#word2 {
+  animation-delay: 2s;
+}
+
+#word3 {
+  animation-delay: 4s;
+}
+
+/* Keyframes for fade-in and fade-out */
+@keyframes fadeInOut {
+  0%, 20% {
+    opacity: 1; /* Fully visible */
+  }
+  40%, 100% {
+    opacity: 0; /* Fully hidden */
+  }
+}
+
+.cta-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: darkorange;
+    transform: scale(1.1);
+}
+
+/* About Us Section & Image */
+.about-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2em 0;
+    padding: 1em;
+    background-color: #f9f9f9; /* Optional: Light background for section */
+}
+
+.about-container {
+    display: flex;
+    width: 100%;
+    gap: 2em; /* Spacing between text and images */
+}
+
+.about-text {
+    flex: 1; /* Take up equal space */
+    text-align: Middle; /* Align text to the left */
+    padding: 1em;
+}
+
+.about-images {
+    flex: 1; /* Take up equal space */
+    display: flex;
+    flex-direction: column;
+    gap: 1em; /* Spacing between images */
+    justify-content: center;
+    align-items: center;
+}
+
+.about-img {
+    max-width: 100%; /* Ensure images fit their container */
+    border-radius: 4px; /* Optional: Rounded corners for images */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Image shadow */
+}
+
+.section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.program-card {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.program-card:hover {
+    background-color: #f0f0f0;
+}
+
+.program-details {
+    display: none;
+    margin-top: 10px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+form input,
+form textarea {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #0066cc;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #004d99;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .program-card {
+        margin: 10px 0;
+    }
+}
